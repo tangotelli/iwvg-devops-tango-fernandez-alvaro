@@ -6,3 +6,4 @@
 [![DevOps](https://github.com/tangotelli/iwvg-devops-tango-fernandez-alvaro/actions/workflows/test.yml/badge.svg)](https://github.com/tangotelli/iwvg-devops-tango-fernandez-alvaro/actions/workflows/test.yml)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=tangotelli_iwvg-devops-tango-fernandez-alvaro&metric=alert_status)](https://sonarcloud.io/dashboard?id=tangotelli_iwvg-devops-tango-fernandez-alvaro)
 [![BetterCodeHub](https://bettercodehub.com/edge/badge/tangotelli/iwvg-devops-tango-fernandez-alvaro?branch=develop)](https://bettercodehub.com/results/tangotelli/iwvg-devops-tango-fernandez-alvaro)
+[![Heroku](https://iwvg-devops-tango-fernandez-a.herokuapp.com/system/version-badge)](https://iwvg-devops-tango-fernandez-a.herokuapp.com/swagger-ui.html)
