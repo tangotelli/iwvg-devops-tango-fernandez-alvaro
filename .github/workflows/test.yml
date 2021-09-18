@@ -16,7 +16,7 @@ jobs:
         run: mvn -B verify # -B: --batch-mode
       - name: Sonar
         if: success() # always() failure() success()
-        run: > # organization == sonar.organization key
+        run: > # organization == sonar organization key
           mvn -B verify -DskipTests sonar:sonar
           -Dsonar.projectKey=tangotelli_iwvg-devops-tango-fernandez-alvaro
           -Dsonar.organization=tangotelli
