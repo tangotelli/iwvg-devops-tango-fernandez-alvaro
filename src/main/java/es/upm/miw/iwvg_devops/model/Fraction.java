@@ -42,4 +42,44 @@ public class Fraction {
                 ", denominator=" + denominator +
                 '}';
     }
+
+    public boolean isProper() {
+        return this.numerator < this.denominator;
+    }
+
+    public boolean isImproper() {
+        return this.numerator > this.denominator;
+    }
+
+    public boolean isEquivalent(Fraction fraction) {
+        return this.numerator * fraction.getDenominator() == this.denominator * fraction.getNumerator();
+    }
+
+    public Fraction add(Fraction fraction) {
+        if (this.denominator != fraction.getDenominator()) {
+            this.reduceToCommonDenominator(fraction);
+        }
+        return new Fraction(this.numerator + fraction.getDenominator(), this.denominator);
+    }
+
+    private void reduceToCommonDenominator(Fraction fraction) {
+        int leastCommonMultiple = new MyMath().leastCommonMultiple(this.denominator, fraction.getDenominator());
+        this.changeDenominator(leastCommonMultiple);
+        fraction.changeDenominator(leastCommonMultiple);
+    }
+
+    public void changeDenominator(int newDenominator) {
+        this.setNumerator((newDenominator / this.denominator) * this.numerator);
+        this.setDenominator(newDenominator);
+    }
+
+    public Fraction multiply(Fraction fraction) {
+        return new Fraction(this.numerator * fraction.getNumerator(),
+                this.denominator * fraction.getDenominator());
+    }
+
+    public Fraction divide(Fraction fraction) {
+        return new Fraction(this.numerator * fraction.getDenominator(),
+                this.denominator * fraction.getNumerator());
+    }
 }
