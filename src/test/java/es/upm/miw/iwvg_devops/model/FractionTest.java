@@ -44,4 +44,49 @@ public class FractionTest {
     public void testToString() {
         Assertions.assertEquals("Fraction{numerator=1, denominator=3}", fraction.toString());
     }
+
+    @Test
+    public void testIsProper() {
+        Assertions.assertEquals(true, fraction.isProper());
+        fraction.setNumerator(5);
+        Assertions.assertEquals(false, fraction.isProper());
+        fraction.setNumerator(3);
+        Assertions.assertEquals(false, fraction.isProper());
+    }
+
+    @Test
+    public void testIsImproper() {
+        Assertions.assertEquals(false, fraction.isImproper());
+        fraction.setNumerator(9);
+        Assertions.assertEquals(true, fraction.isImproper());
+        fraction.setNumerator(3);
+        Assertions.assertEquals(false, fraction.isImproper());
+    }
+
+    @Test
+    public void testIsEquivalent() {
+        Fraction equivalent = new Fraction(3, 9);
+        Assertions.assertEquals(true, fraction.isEquivalent(equivalent));
+        equivalent = new Fraction(2, 9);
+        Assertions.assertEquals(false, fraction.isEquivalent(equivalent));
+    }
+
+    @Test
+    public void testAdd() {
+        Assertions.assertEquals(new Fraction(2, 3), fraction.add(fraction));
+        Fraction newFraction = new Fraction(2, 5);
+        Assertions.assertEquals(new Fraction(11, 15), fraction.add(newFraction));
+    }
+
+    @Test
+    public void testMultiply() {
+        Fraction newFraction = new Fraction(2, 5);
+        Assertions.assertEquals(new Fraction(2, 15), fraction.multiply(newFraction));
+    }
+
+    @Test
+    public void testDivide() {
+        Fraction newFraction = new Fraction(2, 5);
+        Assertions.assertEquals(new Fraction(5, 6), fraction.divide(newFraction));
+    }
 }
