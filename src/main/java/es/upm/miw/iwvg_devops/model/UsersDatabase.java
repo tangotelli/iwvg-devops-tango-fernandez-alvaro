@@ -9,8 +9,8 @@ public class UsersDatabase {
 
         List<Fraction> fractions1 = List.of(
                 new Fraction(0, 1),
-                new Fraction(1, 1),
-                new Fraction(2, 1)
+                new Fraction(1, 3),
+                new Fraction(2, 5)
         );
         List<Fraction> fractions2 = List.of(
                 new Fraction(2, 1),
