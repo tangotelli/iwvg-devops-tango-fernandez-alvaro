@@ -26,4 +26,10 @@ public class Searches {
                 .filter(user -> user.getFractions().stream().allMatch(Fraction::isProper))
                 .map(User::getId);
     }
+
+    public static Stream<String> findUserIdBySomeProperFraction() {
+        return new UsersDatabase().findAll()
+                .filter(user -> user.getFractions().stream().anyMatch(Fraction::isProper))
+                .map(User::getId);
+    }
 }
