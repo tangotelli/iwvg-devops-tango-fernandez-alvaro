@@ -22,6 +22,7 @@ class SearchesTest {
     void testFindUserIdByAllProperFraction() {
         ArrayList<String> userIds = new ArrayList<String>();
         userIds.add("1");
+        userIds.add("5");
         Assertions.assertEquals(userIds, Searches.findUserIdByAllProperFraction().collect(Collectors.toList()));
     }
 

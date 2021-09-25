@@ -30,7 +30,7 @@ public class UsersDatabase {
         );
         List<Fraction> fractions5 = List.of(
                 new Fraction(0, 1),
-                new Fraction(0, -2),
+                new Fraction(0, 2),
                 new Fraction(0, 3)
         );
 
