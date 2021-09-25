@@ -1,1 +1,1 @@
-  web: java -Dserver.port=$PORT $JAVA_OPTS -jar target/iwvg-devops-tango-fernandez-alvaro-2.2.0-SNAPSHOT.jar
+  web: java -Dserver.port=$PORT $JAVA_OPTS -jar target/iwvg-devops-tango-fernandez-alvaro-2.3.0-SNAPSHOT.jar
