@@ -5,6 +5,10 @@ import java.util.stream.Stream;
 
 public class Searches {
 
+    private Searches() {
+        throw new IllegalStateException("Utility class");
+    }
+
     public static Double findFirstDecimalFractionByUserName(String name) {
         return new UsersDatabase().findAll()
                 .filter(user -> user.getName().equals(name))

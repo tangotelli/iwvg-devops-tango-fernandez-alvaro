@@ -5,29 +5,28 @@ import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
-public class SearchesTest {
+class SearchesTest {
 
     @Test
-    public void testFindFirstDecimalFractionByUserName() {
+    void testFindFirstDecimalFractionByUserName() {
         Assertions.assertEquals(2.0, Searches.findFirstDecimalFractionByUserName("Ana"), 10e-5);
     }
 
     @Test
-    public void testFindFractionDivisionByUserId() {
+    void testFindFractionDivisionByUserId() {
         Assertions.assertEquals(new Fraction(-48, 60), Searches.findFractionDivisionByUserId("3"));
     }
 
     @Test
-    public void testFindUserIdByAllProperFraction() {
+    void testFindUserIdByAllProperFraction() {
         ArrayList<String> userIds = new ArrayList<String>();
         userIds.add("1");
         Assertions.assertEquals(userIds, Searches.findUserIdByAllProperFraction().collect(Collectors.toList()));
     }
 
     @Test
-    public void testFindUserIdBySomeProperFraction() {
+    void testFindUserIdBySomeProperFraction() {
         ArrayList<String> userIds = new ArrayList<String>();
         userIds.add("1");
         userIds.add("2");

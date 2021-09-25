@@ -4,49 +4,49 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class FractionTest {
+class FractionTest {
 
     Fraction fraction;
 
     @BeforeEach
-    public void initializeTestData() {
+    void initializeTestData() {
         fraction = new Fraction(1, 3);
     }
 
     @Test
-    public void testGetNumerator() {
+    void testGetNumerator() {
         Assertions.assertEquals(1, fraction.getNumerator());
     }
 
     @Test
-    public void testGetDenominator() {
+    void testGetDenominator() {
         Assertions.assertEquals(3, fraction.getDenominator());
     }
 
     @Test
-    public void testSetNumerator() {
+    void testSetNumerator() {
         fraction.setNumerator(5);
         Assertions.assertEquals(5, fraction.getNumerator());
     }
 
     @Test
-    public void testSetDenominator() {
+    void testSetDenominator() {
         fraction.setDenominator(11);
         Assertions.assertEquals(11, fraction.getDenominator());
     }
 
     @Test
-    public void testDecimal() {
+    void testDecimal() {
         Assertions.assertEquals(0.3333, fraction.decimal(), 10e-5);
     }
 
     @Test
-    public void testToString() {
+    void testToString() {
         Assertions.assertEquals("Fraction{numerator=1, denominator=3}", fraction.toString());
     }
 
     @Test
-    public void testIsProper() {
+    void testIsProper() {
         Assertions.assertEquals(true, fraction.isProper());
         fraction.setNumerator(5);
         Assertions.assertEquals(false, fraction.isProper());
@@ -55,7 +55,7 @@ public class FractionTest {
     }
 
     @Test
-    public void testIsImproper() {
+    void testIsImproper() {
         Assertions.assertEquals(false, fraction.isImproper());
         fraction.setNumerator(9);
         Assertions.assertEquals(true, fraction.isImproper());
@@ -64,7 +64,7 @@ public class FractionTest {
     }
 
     @Test
-    public void testIsEquivalent() {
+    void testIsEquivalent() {
         Fraction equivalent = new Fraction(3, 9);
         Assertions.assertEquals(true, fraction.isEquivalent(equivalent));
         equivalent = new Fraction(2, 9);
@@ -72,20 +72,20 @@ public class FractionTest {
     }
 
     @Test
-    public void testAdd() {
+    void testAdd() {
         Assertions.assertEquals(new Fraction(2, 3), fraction.add(fraction));
         Fraction newFraction = new Fraction(2, 5);
         Assertions.assertEquals(new Fraction(11, 15), fraction.add(newFraction));
     }
 
     @Test
-    public void testMultiply() {
+    void testMultiply() {
         Fraction newFraction = new Fraction(2, 5);
         Assertions.assertEquals(new Fraction(2, 15), fraction.multiply(newFraction));
     }
 
     @Test
-    public void testDivide() {
+    void testDivide() {
         Fraction newFraction = new Fraction(2, 5);
         Assertions.assertEquals(new Fraction(5, 6), fraction.divide(newFraction));
     }
